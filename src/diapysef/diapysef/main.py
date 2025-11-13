@@ -179,6 +179,13 @@ def convertTDFtoMzML(analysis_dir, output_fname, merge_scans, keep_frames, verbo
     click.echo(
         f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] INFO: Finished converting TDF data to mzML!")
 
+@cli.command()
+def download_bruker_sdk():
+    '''
+    Download and install the Bruker SDK if not already installed
+    '''
+    check_bruker_sdk()
+
 # Generate a report for spectic type of plots
 
 
